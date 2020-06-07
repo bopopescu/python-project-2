@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<!--{% block content %}-->
+<!--{{-->
+<!--   import .models from Users-->
+<!--   try:-->
+<!--        user = Users.objects.get(id=request.session['loggeduser'])-->
+<!--        print(user)-->
+<!--        print(request.session['loggeduser'])-->
+<!--   except(KeyError,Users.DoesNotExist):-->
+<!--        user = None-->
+<!--}}-->
+<!--{% endblock content %}-->
+
+<body>
+<table class="table table-striped" >
+    <thead>
+      <tr>
+		<th>User Name</th>
+		<th>Password</th>
+      </tr>
+    </thead>
+    <tbody>
+
+    <tr>
+       <td>{{loggeduser.username}}</td>
+        <td>{{loggeduser.password}}</td>
+       </tr>
+
+	</tbody>
+</table>
+
+
+</body>
+</html>

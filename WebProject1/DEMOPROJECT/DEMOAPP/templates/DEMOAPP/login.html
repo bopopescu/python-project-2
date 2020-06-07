@@ -1,0 +1,59 @@
+{% load static %}
+<html>
+<head>
+    <title>
+        login page
+    </title>
+    <style>
+        div.login-border {
+            position:relative;
+            top:300px;
+            left:500px;
+            border:3px solid red;
+            width:300px;
+            padding:10px;
+        }
+    </style>
+</head>
+<body>
+<!-- <span style="position:relative;top:300px;left:500px;border:3px solid red;width:200px"> -->
+
+<img src="{% static 'Cap-17.jpg' %}" alt="Company Picture" width="24" height="39">
+<div class="login-border">
+    <form action=" " method="POST">{% csrf_token %}
+        <table style="width:100%">
+            <tr>
+                <td>
+                    <label username="username">User Name</label>
+                </td>
+                <td>
+                    <input type="text" id="username" name="username">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label password="password">Password</label>
+                </td>
+                <td>
+                    <input type="password" id="password" name="password">
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    {% block content %} {{ errorstr }} {% endblock content %}</td>
+            </tr>
+            <tr>
+                <td>
+                </td>
+                <td>
+                    <input class="btn btn-default" type="submit" value="login">
+                    <input type="reset">
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+<!-- </span> -->
+</body>
+</html>

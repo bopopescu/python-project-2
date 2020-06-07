@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>View Employee</title>
+</head>
+<body>
+<h1> View Employee Information </h1>
+</body>
+{% for user in userlist %}
+    <tr>
+    <td>
+       {{ user.username }}
+    </td>
+    <td>
+        {{ user.employeedetails.address }}
+    </td>
+    <td>
+        {{ user.employeedetails.name }}
+    </td>
+    </tr>
+{% endfor %}
+</html>

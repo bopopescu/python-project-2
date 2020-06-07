@@ -1,0 +1,93 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register User</title>
+    <style>
+        h2{ text-align: center;}
+    </style>
+     <style>
+        div.login-border {
+            position:relative;
+            top:100px;
+            left:700px;
+            border:3px solid red;
+            width:500px;
+            padding:10px;
+            padding-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+<h2>Register User</h2>
+<div class="login-border">
+<table> <tr>
+<img src="{% static 'Cap-17.jpg' %}" alt="Stickman" width="128" height="128">
+ </tr></table>
+</div>
+<div class="login-border">
+ <form action=" " method="POST">{% csrf_token %}
+    <table style="...">
+        <tr>
+            <th><label> Name:</label></th>
+            <td>
+            <input name="name" type="text"/>
+            </td>
+        </tr>
+        <tr>
+            <th><label> User Name:</label></th>
+            <td><input name="username" type="text" autocomplete="nope"></td>
+        </tr>
+        <tr>
+            <th><label> Password:</label></th>
+            <td><input name="password" type="password" autocomplete="new-password"></td>
+        </tr>
+        <tr>
+            <th>User Type:</th>
+            <td>
+                <!-- any one of the option is selected if name should same-->
+                <input name="usertype" type="radio" value="Admin"> Admin
+                <input name="usertype" type="radio" value="Hr"> Hr
+                <input name="usertype" type="radio" value="Employee"> Employee
+            </td>
+        </tr>
+        <tr><th><label> Phone:</label></th><td><input name="phone" type="tel"/></td></tr>
+        <tr><th><label> Address: </label> </th>
+     <td><textarea name="address" rows="4" cols="50">
+     </textarea> </td></tr>
+     <tr><th>
+        <label> Sex :</label>
+     </th>
+         <td>
+         <select name="sex">
+         <option>Male</option>
+         <option>Female</option>
+         <option>Transgender</option>
+        </select>
+         </td></tr>
+        <tr><th>
+            <label> Email : </label></th><td> <input name="email" type="email"> </td></tr>
+        <tr><th><label> Married :</label></th>
+         <td><select name="married">
+         <option>Married</option>
+         <option>Single</option>
+         <option>Divorced</option>
+     </select>
+         </td></tr>
+        <tr><td></td></tr>
+        <tr>
+      <td></td>
+      <td>
+        <input class="btn btn-default" type="submit" value="Register">
+        <input type="reset">
+      </td>
+        </tr>
+      </table>
+
+
+
+</form>
+</div>
+</body>
+</html>

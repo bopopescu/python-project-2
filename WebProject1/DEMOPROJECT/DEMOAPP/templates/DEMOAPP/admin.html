@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome Admin!</title>
+</head>
+<body>
+<h2> Welcome to Admin Page </h2>
+ {% block content %}
+<script>
+    alert ('{{ errorstr }}');
+</script>
+{% endblock content %}
+<a href="{% url 'user-register' %}">Employee Registration Page</a> <br>
+<input type="button" value="View Employee" OnClick="location.href='{% url 'view-employees' %}'">
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HWelcome to Home Page</title>
+    <style>
+        table,th,td { border: 1px solid black;}
+    </style>
+</head>
+<body>
+<div class="container">
+
+<table class="table table-striped" >
+    <thead>
+      <tr>
+		<th>User Name</th>
+		<th>Password</th>
+      </tr>
+    </thead>
+    <tbody>
+
+    <tr>
+
+       <td>{{ loggedUser.username }}</td>
+        <td>{{ loggedUser.password }}</td>
+
+       </tr>
+
+	</tbody>
+</table>
+</div>
+</body>
+</html>
